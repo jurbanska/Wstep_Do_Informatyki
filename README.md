@@ -20,3 +20,7 @@ https://pl.wikipedia.org/wiki/Liczby_zespolone#Posta%C4%87_wyk%C5%82adnicza\
 print("WDI")
 ```
 
+Kolumna 1| Kolumna 2
+------------ | -------------
+<3 | <3
+... | ...
