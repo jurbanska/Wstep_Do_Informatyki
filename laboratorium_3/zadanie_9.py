@@ -1,8 +1,8 @@
 operacja = input('Co chcesz zrobic w kolejnym kroku - wplata/wyplata/saldo/zakoncz: ')
-pin = input('Podaj pin: ')  # pin ustawiony na 1234
 saldo = 0
 
 while operacja != 'zakoncz':
+    pin = input('Podaj pin: ')  # pin ustawiony na 1234
     if pin == '1234':
         if operacja == 'wplata':
             wplata = int(input('Podaj wplacana kwote: '))
