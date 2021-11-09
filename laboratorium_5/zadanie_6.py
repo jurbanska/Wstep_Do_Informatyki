@@ -4,8 +4,8 @@ if liczba < 2:
     print("Liczba nie jest pierwsza")
     exit()
 
-for i in range(2, int(liczba ** (1/2))):
+for i in range(2, int((liczba ** (1/2))+1)):
     if (liczba % i) == 0:
-        print("złożona")
+        print("Liczba jest złożona")
         exit()
-print("pierwsza")
+print("Liczba jest pierwsza")
