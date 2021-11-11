@@ -22,4 +22,5 @@ else:
             exit()
 
 
+
 #binarnie = bin(int(liczba))[2:] #ucinam przedrostek '0b', gdyz python tak zapisuje l. binarna
