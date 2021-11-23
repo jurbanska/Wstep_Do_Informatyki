@@ -17,21 +17,12 @@ except IdenticalNumberError:
 
 liczba = input("Podaj liczbę: ")
 
-if system_1 == 2:  # zamiana binarnego na dziesiętny
+if system_1 == 2 or system_1 == 8:  # zamiana binarnego i oktalnego na dziesiętny
     j = 0
     i = len(liczba) - 1
     wynikdec = 0
     while i > -1:
-        wynikdec = int(liczba[i]) * (2 ** j) + wynikdec
-        j += 1
-        i -= 1
-
-if system_1 == 8:  # zamiana oktalnego na dziesiętny
-    j = 0
-    i = len(liczba) - 1
-    wynikdec = 0
-    while i > -1:
-        wynikdec = int(liczba[i]) * (8 ** j) + wynikdec
+        wynikdec = int(liczba[i]) * (system_1 ** j) + wynikdec
         j += 1
         i -= 1
 
@@ -67,27 +58,22 @@ if system_1 == 16:  # zamiana szesnastkowego na dziesiętny
         j += 1
         i -= 1
 
-if system_2 == 2:
-    binarny = ""
+if system_2 == 2 or system_2 == 8:  # zamiana z dziesiętnego na binarny lub oktalny
+    wynik = ""
     while wynikdec > 0:
-        binarny = str(wynikdec % 2) + binarny
-        wynikdec = int(wynikdec / 2)
-    print("Liczba binarnie: ", binarny)
-
-if system_2 == 8:
-    oktalny = ""
-    while wynikdec > 0:
-        oktalny = str(wynikdec % 8) + oktalny
-        wynikdec = int(wynikdec / 8)
-    print("Liczba oktalnie: ", oktalny)
+        wynik = str(wynikdec % system_2) + wynik
+        wynikdec = int(wynikdec / system_2)
+    print(wynik)
 
 if system_2 == 10:
     print(wynikdec)
 
-if system_2 == 16:
+if system_2 == 16:  # zamiana z dziesiętnego na szesnastkowy
     cyfry = "0123456789ABCDEF"
     szesnastkowy = ""
     while wynikdec > 0:
         szesnastkowy = cyfry[wynikdec % 16] + szesnastkowy
         wynikdec = int(wynikdec / 16)
-    print("Liczba szesnastkowo: ", szesnastkowy)
+    print(szesnastkowy)
+
+#przykłady: bin => hex: 111101 = 3D, hex => dec: 3D = 61, dec => okt: 61 = 75
