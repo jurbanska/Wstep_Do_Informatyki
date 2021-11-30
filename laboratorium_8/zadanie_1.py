@@ -20,7 +20,7 @@ def prime(liczba):  # funkcja sprawdzajaca, czy liczba jest pierwsza
 
 
 i = 0
-liczby = []
+liczby = [7, 45, 45, 34, 53, 45, 4, 3, 11, 18]
 
 try:
     N = int(input("Długość listy: "))
@@ -56,8 +56,8 @@ for i in range(0, len(liczby)):  # sumowanie podzbiorów między zerami
         wynik.append(suma)
         suma = 0
 
-if liczby[len(liczby) - 1] == 0:
-    liczby.pop(len(liczby) - 1)
+
+liczby.pop(len(liczby) - 1)
 print(wynik)
 
 '''
